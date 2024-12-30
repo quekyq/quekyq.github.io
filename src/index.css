@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+      @apply min-h-screen text-white;
+      /* background: linear-gradient(0deg, rgba(255,253,247,1) 0%, rgba(249,244,255,1) 99%); */
+      background: #fbf6ea;
+      /* background: linear-gradient(0deg, rgba(255,139,202,1) 0%, rgba(255,247,247,1) 99%); */
+    }
+  }
+  
+  /* Apply fonts */
+  .font-title {
+    font-family: 'Nova Mono', serif;
+  }
+  
+  .font-body {
+    font-family: 'Space Mono', sans-serif;
+  }
