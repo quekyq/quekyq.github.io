@@ -1,39 +1,49 @@
 import React, { useState, useEffect, useRef } from 'react';
-import homeImage from '../assets/home.png';
+import homeImage from '../assets/home.webp';
 
 const Home = () => {
     const [text, setText] = useState('');
     const [fontSize, setFontSize] = useState('16px'); 
     const imageRef = useRef(null);
     const fullText = 'Hello!\nWelcome to\nmy site!\n(〜￣▽￣)〜';
+    const fullText2 = 'I\'m Perrie, \nsoftware\nengineer &\nillustrator';
 
     useEffect(() => {
         let timeoutId = null;
 
-        // typing animated effect
-        const typeText = async () => {
+        // Typing animated effect
+        const typeText = async (textToType) => {
             if (timeoutId) {
                 clearTimeout(timeoutId);
             }
 
             setText('');
-            const typeChar = (index) => {
-                return new Promise(resolve => {
+            
+            // Type each character
+            for (let i = 0; i < textToType.length; i++) {
+                await new Promise(resolve => {
                     timeoutId = setTimeout(() => {
-                        setText((currentText) => currentText + fullText[index]);
+                        setText(current => current + textToType[i]);
                         resolve();
-                    }, 70);
+                    }, 65);
                 });
-            };
-
-            for (let i = 0; i < fullText.length; i++) {
-                await typeChar(i);
             }
 
-            timeoutId = setTimeout(typeText, 2000);
+            // Wait before clearing
+            await new Promise(resolve => {
+                timeoutId = setTimeout(resolve, 1500);
+            });
         };
 
-        typeText();
+        // Alternate between texts
+        const animateTexts = async () => {
+            while (true) {
+                await typeText(fullText);
+                await typeText(fullText2);
+            }
+        };
+
+        animateTexts();
 
         return () => {
             if (timeoutId) {
@@ -43,33 +53,37 @@ const Home = () => {
     }, []);
 
     useEffect(() => {
-        const updateFontSize = () => {
+        const updateFontSizeAndPosition = () => {
             if (imageRef.current) {
                 const imageWidth = imageRef.current.offsetWidth;
-                const newFontSize = imageWidth * 0.028; // 5% of the image width
+                const newFontSize = imageWidth * 0.027;
                 setFontSize(`${newFontSize}px`);
             }
         };
-        updateFontSize();
-        window.addEventListener('resize', updateFontSize);
+
+        updateFontSizeAndPosition();
+        window.addEventListener('resize', updateFontSizeAndPosition);
 
         return () => {
-            window.removeEventListener('resize', updateFontSize);
+            window.removeEventListener('resize', updateFontSizeAndPosition);
         };
     }, []);
 
     return (
-        <div className="px-4 py-12">
-            <div style={{ backgroundColor: '#f1df7e' }} className=" border-stone-950 border-4 rounded-lg min-h-[75vh] w-full max-h-[85vh] flex flex-col items-center justify-center p-8">
-                <div className="relative flex flex-col items-center">
+        <div className="px-4 py-8">
+            <div 
+                style={{ backgroundColor: '#f1df7e' }} 
+                className="border-stone-950 border-4 rounded-lg min-h-[25vh] w-full max-h-[85vh] flex flex-col items-center justify-center p-8"
+            >
+                <div className="relative w-full max-w-[80%]">
                     <img 
                         ref={imageRef}
                         src={homeImage} 
                         alt="Home" 
-                        className="max-w-[80%] h-auto mr-8"
+                        className="w-full h-auto"
                     />
                     <div 
-                        className="absolute top-[46%] left-[52.5%] transform -translate-x-1/2 -translate-y-1/2 rotate-[-8.5deg] w-[30%]"
+                        className="absolute top-[46%] left-[50.5%] transform -translate-x-1/2 -translate-y-1/2 rotate-[-8.5deg] w-[30%]"
                         style={{ fontSize }}
                     >
                         <div className="h-[6em] flex flex-col justify-start">

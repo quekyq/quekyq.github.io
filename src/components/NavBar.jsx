@@ -6,7 +6,7 @@ const NavBar = () => {
   
   const linkClass = ({ isActive }) =>
     isActive
-      ? 'text-black rounded-md px-3 py-2'
+      ? 'text-emerald-500 rounded-md px-3 py-2'
       : 'text-black hover:text-rose-400 rounded-md px-3 py-2'
 
   return (
@@ -23,7 +23,7 @@ const NavBar = () => {
           </div>
 
           {/* Desktop menu */}
-          <div className='hidden md:flex space-x-4 text-xl font-extrabold tracking-wider lowercase font-title'>
+          <div className='hidden md:flex space-x-4 text-2xl font-extrabold tracking-wider lowercase font-title'>
             
             <NavLink to='/about' className={linkClass}>About</NavLink>
             <NavLink to='/project' className={linkClass}>Projects</NavLink>
