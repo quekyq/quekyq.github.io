@@ -34,7 +34,7 @@ const NavBar = () => {
           <div className='md:hidden'>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className='text-blue-500 hover:text-rose-400 p-2'
+              className='text-emerald-400 hover:text-rose-400 p-2'
             >
               <svg
                 className="h-6 w-6"

@@ -1,4 +1,4 @@
-import { animThumbnails, chaosPics } from "../assets/art";
+import { animThumbnails, chaosPics, hotPics } from "../assets/art";
 
 export const animations = [
     {
@@ -72,7 +72,7 @@ export const animations = [
     {
         id: 5,
         title: "Mask Diaries (2020)",
-        description: `Capturing the surreal life of 2020.`,
+        description: `Capturing the strange period of 2020.`,
         embed: "https://player.vimeo.com/video/481114294?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479",
         thumbnail: animThumbnails.mask,
         duration: "1:00",
@@ -89,5 +89,16 @@ export const animations = [
         year: "2023",
         role: "Animator",
         processImages: [animThumbnails.fashion1, animThumbnails.fashion2, animThumbnails.fashion3]
-    }
+    },
+    {
+        id: 7,
+        title: "Hot Day",
+        description: `Stop Motion animation created after a series of unbearably hot days in Singapore.`,
+        embed: "https://player.vimeo.com/video/1048061563?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479",
+        thumbnail: animThumbnails.hotDay,
+        duration: "0:08",
+        year: "2023",
+        role: "Animator",
+        processImages: hotPics
+    },
 ];
