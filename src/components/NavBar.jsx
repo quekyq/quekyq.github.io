@@ -24,9 +24,8 @@ const NavBar = () => {
 
           {/* Desktop menu */}
           <div className='hidden md:flex space-x-4 text-2xl font-extrabold tracking-wider lowercase font-title'>
-            
             <NavLink to='/about' className={linkClass}>About</NavLink>
-            <NavLink to='/project' className={linkClass}>Projects</NavLink>
+            <NavLink to='/projects' className={linkClass}>Projects</NavLink>
             <NavLink to='/art' className={linkClass}>Art</NavLink>
           </div>
 
@@ -59,7 +58,6 @@ const NavBar = () => {
         {isMenuOpen && (
           <div className='md:hidden'>
             <div className='flex flex-col items-end space-y-2 px-2 pt-2 pb-3 text-xl font-extrabold tracking-wider lowercase font-title'>
-             
               <NavLink 
                 to='/about' 
                 className={linkClass}
@@ -68,7 +66,7 @@ const NavBar = () => {
                 About
               </NavLink>
               <NavLink 
-                to='/project' 
+                to='/projects' 
                 className={linkClass}
                 onClick={() => setIsMenuOpen(false)}
               >

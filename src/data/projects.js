@@ -2,52 +2,33 @@ export const projects = [
     {
         id: 'minecraft',
         title: 'MINI MINECRAFT',
-        shortDescription: 'Mini Minecraft built with C++ and OpenGL',
-        image: '/src/assets/project/minecraft.png',
-        fullDescription: 'Detailed description of the Minecraft project...',
-        technologies: ['C++', 'OpenGL', 'GLSL'],
-        github: 'https://github.com/...',
-        demo: 'https://...'
+        description: 'Miniature version of Minecraft built with C++ and OpenGL',
+        image: '/src/assets/project/minecraft.png'
     },
     // Add more projects here
     {
         id: 'chartify',
-        title: 'Chartify',
-        shortDescription: 'Music Trend Analysis Tool | A Database & Data Visualization Project',
-        image: '/src/assets/project/chartify.png',
-        fullDescription: 'Detailed description of the Minecraft project...',
-        technologies: ['PostgreSQL', 'React', 'Vite', 'Node.js'],
-        github: 'https://github.com/...',
-        demo: 'https://...'
-    },
-    {
-        id: 'maya',
-        title: 'Mini Maya',
-        shortDescription: 'Music Trend Analysis Web Application',
-        image: '/src/assets/project/minecraft.png',
-        fullDescription: 'Detailed description of the Minecraft project...',
-        technologies: ['PostgreSQL', 'React', 'Vite', 'Node.js'],
-        github: 'https://github.com/...',
-        demo: 'https://...'
+        title: 'Chartify | Music Trend Analysis Tool',
+        description: 'A Database & Data Visualization Project',
+        image: '/src/assets/project/chartify.png'
     },
     {
         id: 'shaders',
         title: 'Graphics Shaders',
-        shortDescription: 'Music Trend Analysis Database & Data Visualization Project',
-        image: '/src/assets/project/minecraft.png',
-        fullDescription: 'Detailed description of the Minecraft project...',
-        technologies: ['PostgreSQL', 'React', 'Vite', 'Node.js'],
-        github: 'https://github.com/...',
-        demo: 'https://...'
+        description: 'Shaders written using OpenGL',
+        image: '/src/assets/project/minecraft.png'
     },
     {
         id: 'studywithme',
         title: 'Study With Me',
-        shortDescription: 'Productivity tool',
-        image: '/src/assets/project/studywithme.png',
-        fullDescription: 'Detailed description of the Minecraft project...',
-        technologies: ['PostgreSQL', 'React', 'Vite', 'Node.js'],
-        github: 'https://github.com/...',
-        demo: 'https://...'
+        description: 'Productivity tool',
+        image: '/src/assets/project/studywithme.png'
     },
+
+    {
+        id: 'portfolio',
+        title: 'Portfolio Site',
+        description: 'Personal Site build with Vite-React and Tailwind CSS',
+        image: '/src/assets/project/minecraft.png'
+    }
 ]; 

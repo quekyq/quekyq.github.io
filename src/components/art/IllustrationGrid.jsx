@@ -1,6 +1,6 @@
 function IllustrationGrid({ images, onImageClick }) {
     return (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-2 py-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8 px-2">
             {images.map((image, index) => (
                 <div key={index} className="relative">
                     <img

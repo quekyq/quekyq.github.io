@@ -14,7 +14,7 @@ export const animations = [
             "24th Digicon6 Asia, 2022 - Singapore Gold",
             "Cartoons Underground, 2022 - Jury Award",
             "Prime the Animation! New Talent International Festival, 2022 - Special Mention",
-            "Festival internacional de Cine Austral (2022) - Enseñanza destacada"
+            "Festival internacional de Cine Austral, 2022 - Enseñanza destacada"
 
         ],
         selections: [
@@ -42,7 +42,7 @@ export const animations = [
     {
         id: 2,
         title: "Uncle's Gymnast Routine",
-        description: `An uncle's unexpected gymnastic performance. A playful exploration of the intersection of everyday life and little extraordinary moments.`,
+        description: `An uncle's unexpected gymnastic performance. A playful exploration into the intersection of everyday life and little extraordinary moments.`,
         embed: "https://player.vimeo.com/video/908686304?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479",
         thumbnail: animThumbnails.gymnast,
         duration: "0:20",

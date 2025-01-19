@@ -11,10 +11,10 @@ function Tabs({ setActiveTab }) {
             <Link
                 to="/art/illustration"
                 onClick={() => setActiveTab('illustration')}
-                className={`px-3 py-2 border-2 border-stone-950 rounded-md transition-colors ${
+                className={`px-3 py-2 border-2 rounded-md transition-colors ${
                     isIllustrationActive
-                    ? 'text-emerald-500 border-emerald-500' 
-                    : 'text-black hover:text-rose-400 hover:border-rose-400 bg-transparent'
+                    ? 'border-emerald-500 text-emerald-500' 
+                    : 'text-black border-stone-950 hover:text-rose-400 hover:border-rose-400 bg-transparent'
                 }`}
             >
                 Illustration
@@ -22,10 +22,10 @@ function Tabs({ setActiveTab }) {
             <Link
                 to="/art/animation"
                 onClick={() => setActiveTab('animation')}
-                className={`px-3 py-2 border-2 border-stone-950 rounded-md transition-colors ${
+                className={`px-3 py-2 border-2 rounded-md transition-colors ${
                     isAnimationActive
                     ? 'text-emerald-500 border-emerald-500'
-                    : 'text-black hover:text-rose-400 hover:border-rose-400 bg-transparent'
+                    : 'text-black border-stone-950  hover:text-rose-400 hover:border-rose-400 bg-transparent'
                 }`}
             >
                 Animation
