@@ -22,7 +22,9 @@ function ChartifyProject() {
                         <span>•</span>
                         <span>Python</span>
                         <span>•</span>
-                        <span>Vite-React</span>
+                        <span>Vite</span>
+                        <span>•</span>
+                        <span>React.js</span>
                         <span>•</span>
                         <span>Node.js</span>
                         <span>•</span>
@@ -34,10 +36,10 @@ function ChartifyProject() {
                     </div>
                         <div className="font-body mt-2">
                             <a 
-                                href="https://github.com/your-repo"
+                                href="https://github.com/quekyq/Chartify"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 text-emerald-500 hover:text-rose-400 transition-colors"
+                                className="inline-flex items-center gap-2 text-violet-500 hover:text-rose-400 transition-colors"
                             >
                                 View on GitHub
                             </a>
@@ -74,7 +76,7 @@ function ChartifyProject() {
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
                                 <div className="order-2 md:order-2 col-span-2 aspect-video w-full">
                                         <iframe 
-                                            src="https://player.vimeo.com/video/1048797460?autoplay=1&loop=1&controls=0&autopause=0" 
+                                            src="https://player.vimeo.com/video/1048797460?h=a249112e49&autoplay=1&loop=1&controls=0&autopause=0&muted=1" 
                                             className="w-full h-full rounded-lg"
                                             allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
                                             title="Day / Night Cycle"
@@ -95,14 +97,14 @@ function ChartifyProject() {
                                 <div className="order-1 md:order-2 space-y-4 col-span-1">
                                     <h3 className="text-xl font-title">Explore Songs</h3>
                                     <p className="text-base text-left font-body">
-                                        Users can discover top performing songs and genres, filtered by time and region. 
+                                        Users can discover top performing <strong>songs</strong> and <strong>genres</strong>, filtered by time and region. 
                                         <br/><br/>
                                         A <strong>search and autocomplete functionality</strong> allows users to dive into a specific song's week-by-week charting history, global performance metrics, and detailed song attributes.
                                     </p>
                                 </div>
                                 <div className="order-2 md:order-1 col-span-2 aspect-video w-full">
                                         <iframe 
-                                            src="https://player.vimeo.com/video/1048794708?autoplay=1&loop=1&controls=0&autopause=0" 
+                                            src="https://player.vimeo.com/video/1048794708?h=c662b96571&autoplay=1&loop=1&controls=0&autopause=0&muted=1" 
                                             className="w-full h-full rounded-lg"
                                             allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
                                             title="Day / Night Cycle"
@@ -124,7 +126,7 @@ function ChartifyProject() {
                                 </div>
                                 <div className="order-2 md:order-2 col-span-2 aspect-video w-full">
                                         <iframe 
-                                            src="https://player.vimeo.com/video/1048796942?autoplay=1&loop=1&controls=0&autopause=0" 
+                                            src="https://player.vimeo.com/video/1048796942?h=31f28b996d&autoplay=1&loop=1&controls=0&autopause=0&muted=1" 
                                             className="w-full h-full rounded-lg"
                                             allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
                                             title="Day / Night Cycle"
@@ -136,7 +138,7 @@ function ChartifyProject() {
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
                                 <div className="order-2 md:order-1 col-span-2 aspect-video w-full">
                                         <iframe 
-                                            src="https://player.vimeo.com/video/1048796716?autoplay=1&loop=1&controls=0&autopause=0" 
+                                            src="https://player.vimeo.com/video/1048796716?h=7b3254abfe&autoplay=1&loop=1&controls=0&autopause=0&muted=1" 
                                             className="w-full h-full rounded-lg"
                                             allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
                                             title="Day / Night Cycle"

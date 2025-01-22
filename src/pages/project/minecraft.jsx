@@ -16,7 +16,7 @@ function MinecraftProject() {
 
             <div className="max-w-4xl mx-auto">
                 <div className="mb-6">
-                    <h1 className="text-3xl font-title mb-4 text-stone-950">MINI MINECRAFT</h1>
+                    <h1 className="text-3xl font-title mb-4 text-stone-950">Mini Minecraft</h1>
                     <div className="flex flex-wrap gap-3 justify-center text-sm font-body text-stone-600">
                         <span>C++</span>
                         <span>•</span>
@@ -73,7 +73,7 @@ function MinecraftProject() {
                                 <div className="order-2 md:order-1">
                                     <div className="aspect-video w-full">
                                         <iframe 
-                                            src="https://player.vimeo.com/video/1048729800?autoplay=1&loop=1&controls=0" 
+                                            src="https://player.vimeo.com/video/1048729800?h=56b5972464&autoplay=1&loop=1&controls=0&muted=1" 
                                             className="w-full h-full rounded-lg"
                                             allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
                                             title="Day / Night Cycle"

@@ -1,8 +1,8 @@
 export const projects = [
     {
         id: 'minecraft',
-        title: 'MINI MINECRAFT',
-        description: 'Miniature version of Minecraft built with C++ and OpenGL',
+        title: 'Mini Minecraft',
+        description: 'Mini version of Minecraft built with C++ and OpenGL',
         image: '/src/assets/project/minecraft.webp'
     },
     // Add more projects here

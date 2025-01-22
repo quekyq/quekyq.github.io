@@ -146,7 +146,7 @@ const About = () => {
                                 href="https://www.aml-penn.com/" 
                                 target="_blank" 
                                 rel="noopener noreferrer"
-                                className="underline decoration-1 underline-offset-2 text-emerald-600 hover:text-rose-600 transition-colors"
+                                className="underline decoration-1 underline-offset-2 text-red-600 hover:text-emerald-600 transition-colors"
                             >
                                 Autonomous Manufacturing Lab
                             </a>
