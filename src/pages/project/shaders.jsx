@@ -14,10 +14,10 @@ function ShadersProject() {
                 Back to Projects
             </button>
 
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-5xl mx-auto">
                 <div className="mb-6">
                     <h1 className="text-3xl font-title mb-4 text-stone-950">Graphics Shaders</h1>
-                    <div className="flex flex-wrap gap-3 justify-center text-sm font-body text-stone-600">
+                    <div className="flex flex-wrap gap-1 md:gap-3 justify-center text-xs md:text-sm font-body text-stone-600">
                         <span>C++</span>
                         <span>•</span>
                         <span>OpenGL</span>

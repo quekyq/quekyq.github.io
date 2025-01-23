@@ -14,10 +14,10 @@ function StudyWithMeProject() {
                 Back to Projects
             </button>
 
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-5xl mx-auto">
                 <div className="mb-6">
                     <h1 className="text-3xl font-title mb-4 text-stone-950">Study With Me</h1>
-                    <div className="flex flex-wrap gap-3 justify-center text-sm font-body text-stone-600">
+                    <div className="flex flex-wrap gap-1 md:gap-3 justify-center text-xs md:text-sm font-body text-stone-600">
                         <span>React.js</span>
                         <span>•</span>
                         <span>Procreate</span>
@@ -45,13 +45,15 @@ function StudyWithMeProject() {
                 </div>
 
                 {/* Main Image/Video Section */}
-                <div className="aspect-video w-full mb-4">
+                <div className="relative mt-6 flex justify-center">
+                    <div className="w-full md:w-[85%] aspect-video">
                     <iframe 
                         src="https://player.vimeo.com/video/1049396513?h=0a7efc633c&autoplay=1&loop=1&controls=0&autopause=0&muted=1" 
                         className="w-full h-full rounded-lg"
                         allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
                         title="Study with Me Demo"
                     />
+                    </div>
                 </div>
 
                 {/* Award Banner */}

@@ -4,7 +4,7 @@ import ProjectGrid from '../components/project/ProjectGrid';
 function Projects() {
     return (
         <div className="px-4 py-8">
-            <div className="max-w-6xl mx-auto">
+            <div className="md:max-w-6xl mx-auto">
                 <ProjectGrid projects={projects} />
             </div>
         </div>

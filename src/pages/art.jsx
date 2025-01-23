@@ -42,30 +42,32 @@ function Art() {
 
     return (
         <div className="px-4 py-8">
-            <Tabs activeTab={activeTab} setActiveTab={(tab) => navigate(`/art/${tab}`)} />
+            <div className="md:max-w-6xl mx-auto">
+                <Tabs activeTab={activeTab} setActiveTab={(tab) => navigate(`/art/${tab}`)} />
 
-            {activeTab === 'illustration' && (
-                <IllustrationGrid 
-                    images={artImages} 
-                    onImageClick={handleImageClick} 
-                />
-            )}
+                {activeTab === 'illustration' && (
+                    <IllustrationGrid 
+                        images={artImages} 
+                        onImageClick={handleImageClick} 
+                    />
+                )}
 
-            {activeTab === 'animation' && (
-                <AnimationGrid animations={animations} />
-            )}
+                {activeTab === 'animation' && (
+                    <AnimationGrid animations={animations} />
+                )}
 
-            {selectedImage && activeTab === 'illustration' && (
-                <IllustrationModal
-                    selectedImage={selectedImage}
-                    currentIndex={currentIndex}
-                    images={artImages}
-                    onClose={() => setSelectedImage(null)}
-                    onNext={handleNext}
-                    onPrev={handlePrev}
-                    onThumbnailClick={handleImageClick}
-                />
-            )}
+                {selectedImage && activeTab === 'illustration' && (
+                    <IllustrationModal
+                        selectedImage={selectedImage}
+                        currentIndex={currentIndex}
+                        images={artImages}
+                        onClose={() => setSelectedImage(null)}
+                        onNext={handleNext}
+                        onPrev={handlePrev}
+                        onThumbnailClick={handleImageClick}
+                    />
+                )}
+            </div>
         </div>
     );
 }

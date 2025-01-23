@@ -61,29 +61,30 @@ function AnimationDetail() {
                 Back to Animations
             </button>
 
-            <div className="max-w-4xl mx-auto">
-                <div className="mb-6">
-                    <h1 className="text-3xl font-title mb-4 text-stone-950">{animation.title}</h1>
-                    <div className="flex flex-wrap gap-3 justify-center text-sm font-body text-stone-600">
-                        <span>{animation.year}</span>
-                        <span>•</span>
-                        <span>{animation.duration}</span>
-                        <span>•</span>
-                        <span>{animation.role}</span>
-                    </div>
-                </div>
+            <div className="max-w-5xl mx-auto ">
                 
-                <div className="aspect-video w-full mb-8">
-                    <iframe
-                        src={animation.embed}
-                        className="w-full min-h-full rounded-lg"
-                        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-                        title={animation.title}
-                    />
+                <h1 className="text-3xl font-title mb-4 text-stone-950">{animation.title}</h1>
+                <div className="flex flex-wrap gap-1 md:gap-3 justify-center text-sm font-body text-stone-600">
+                    <span>{animation.year}</span>
+                    <span>•</span>
+                    <span>{animation.duration}</span>
+                    <span>•</span>
+                    <span>{animation.role}</span>
+                </div>
+            
+                <div className="relative mt-6 flex justify-center">
+                    <div className="w-full md:w-[85%] aspect-video">
+                        <iframe
+                            src={animation.embed}
+                            className="absolute inset-0 w-full h-full rounded-lg"
+                            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                            title={animation.title}
+                        />
+                    </div>
                 </div>
 
                 <div className="prose prose-stone max-w-none">
-                    <div className="mb-12 text-black">
+                    <div className="mb-12 mt-8 text-black">
                         <p className="text-base font-body">{animation.description}</p>
                         
                         <div className="grid grid-cols-1 mt-8 md:grid-cols-2 gap-8 text-emerald-500 ">

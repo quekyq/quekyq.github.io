@@ -14,10 +14,10 @@ function ChartifyProject() {
                 Back to Projects
             </button>
 
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-5xl mx-auto">
                 <div className="mb-6">
                     <h1 className="text-3xl font-title mb-4 text-stone-950">Chartify</h1>
-                    <div className="flex flex-wrap gap-3 justify-center text-sm font-body text-stone-600">
+                    <div className="flex flex-wrap gap-1 md:gap-3 justify-center text-xs md:text-sm font-body text-stone-600">
                         <span>PostgreSQL</span>
                         <span>•</span>
                         <span>Python</span>
@@ -47,7 +47,8 @@ function ChartifyProject() {
                 </div>
 
                 {/* Main Image/Video Section */}
-                <div className="aspect-video w-full mb-8">
+                <div className="relative mt-6 flex justify-center">
+                    <div className="w-full md:w-[85%] aspect-video">
                     <iframe 
                         className="w-full h-full" 
                         src="https://www.youtube.com/embed/kV12iIxmCQA?si=U9Twp4nUri8on4r8?vq=hd1080p" 
@@ -56,11 +57,12 @@ function ChartifyProject() {
                         referrerPolicy="strict-origin-when-cross-origin" 
                         allowFullScreen
                     />
+                     </div>
                 </div>
 
                 {/* Project Description */}
                 <div className="prose prose-stone max-w-none">
-                    <div className="mb-12 text-black">
+                    <div className="mb-12 mt-8 text-black">
                         <p className="text-base font-body mb-6">
                         Chartify is a web application that delivers music trend analytics through interactive data visualizations. Built with a <strong>relational PostgreSQL database</strong>, it integrates datasets from Spotify, Kaggle, and lyrics retrieved via the LRCLIB API. 
                         <br/><br/>

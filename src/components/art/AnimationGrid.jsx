@@ -5,7 +5,7 @@ function AnimationGrid({ animations }) {
     const getSlug = (title) => title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
 
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 px-2">
             {animations.map((animation) => (
                 <Link 
                     key={animation.id} 

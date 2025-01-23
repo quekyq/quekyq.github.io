@@ -15,10 +15,10 @@ function MinecraftProject() {
                 Back to Projects
             </button>
 
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-5xl mx-auto">
                 <div className="mb-6">
                     <h1 className="text-3xl font-title mb-4 text-stone-950">Mini Minecraft</h1>
-                    <div className="flex flex-wrap gap-3 justify-center text-sm font-body text-stone-600">
+                    <div className="flex flex-wrap gap-1 md:gap-3 text-xs md:text-sm justify-center font-body text-stone-600">
                         <span>C++</span>
                         <span>•</span>
                         <span>OpenGL</span>
@@ -26,7 +26,8 @@ function MinecraftProject() {
                 </div>
 
                 {/* Main Image/Video Section */}
-                <div className="aspect-video w-full mb-8">
+                <div className="relative mt-6 flex justify-center">
+                    <div className="w-full md:w-[85%] aspect-video">
                     <iframe 
                         
                         className="w-full h-full"
@@ -36,11 +37,12 @@ function MinecraftProject() {
                         referrerPolicy="strict-origin-when-cross-origin" 
                         allowFullScreen
                     />
+                    </div>
                 </div>
 
                 {/* Project Description */}
                 <div className="prose prose-stone max-w-none">
-                    <div className="mb-12 text-black">
+                    <div className="mb-12 mt-8 text-black">
                         <p className="text-base font-body mb-6">
                             A mini version of Minecraft built from scratch in a team of 3, using C++ and OpenGL.
                         </p>
