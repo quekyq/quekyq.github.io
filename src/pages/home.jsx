@@ -75,12 +75,11 @@ const Home = () => {
                 style={{ backgroundColor: '#f1df7e' }} 
                 className="border-stone-950 border-4 rounded-lg min-h-[25vh] w-full max-h-[85vh] flex flex-col items-center justify-center p-8"
             >
-                <div className="relative w-full max-w-[80%]">
+                <div className="relative w-full md:max-w-[80%]">
                     <img 
                         ref={imageRef}
                         src={homeImage} 
                         alt="Home" 
-                        className="w-full h-auto"
                     />
                     <div 
                         className="absolute top-[46%] left-[50.5%] transform -translate-x-1/2 -translate-y-1/2 rotate-[-8.5deg] w-[30%]"

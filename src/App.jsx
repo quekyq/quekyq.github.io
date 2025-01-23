@@ -18,6 +18,8 @@ import ChartifyProject from './pages/project/chartify';
 import MayaProject from './pages/project/maya';
 import ShadersProject from './pages/project/shaders';
 import StudyWithMeProject from './pages/project/studywithme';
+import PostShadersProject from './pages/project/postshader';
+import PortfolioProject from './pages/project/portfolio';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -35,6 +37,8 @@ const router = createBrowserRouter(
       <Route path="projects/maya" element={<MayaProject/>} />
       <Route path="projects/shaders" element={<ShadersProject/>} />
       <Route path="projects/studywithme" element={<StudyWithMeProject/>} />
+      <Route path="projects/surface-post-shaders" element={<PostShadersProject/>} />
+      <Route path="projects/personalsite" element={<PortfolioProject/>} />
     </Route>
   )
 );

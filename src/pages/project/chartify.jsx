@@ -34,12 +34,12 @@ function ChartifyProject() {
                         <span>•</span>
                         <span>Shadcn UI</span>
                     </div>
-                        <div className="font-body mt-2">
+                        <div className="font-body mt-3">
                             <a 
                                 href="https://github.com/quekyq/Chartify"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 text-violet-500 hover:text-rose-400 transition-colors"
+                                className="inline-flex items-center gap-2 border-2 border-slate-950 text-slate-950 hover:text-rose-400 hover:border-rose-400 transition-colors rounded-lg px-2 mx-1 text-sm"
                             >
                                 View on GitHub
                             </a>
@@ -49,8 +49,7 @@ function ChartifyProject() {
                 {/* Main Image/Video Section */}
                 <div className="aspect-video w-full mb-8">
                     <iframe 
-                        width="960" 
-                        height="540" 
+                        className="w-full h-full" 
                         src="https://www.youtube.com/embed/kV12iIxmCQA?si=U9Twp4nUri8on4r8?vq=hd1080p" 
                         title="YouTube video player" 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -62,7 +61,6 @@ function ChartifyProject() {
                 {/* Project Description */}
                 <div className="prose prose-stone max-w-none">
                     <div className="mb-12 text-black">
-                        <h2 className="text-2xl font-title mb-4">Overview</h2>
                         <p className="text-base font-body mb-6">
                         Chartify is a web application that delivers music trend analytics through interactive data visualizations. Built with a <strong>relational PostgreSQL database</strong>, it integrates datasets from Spotify, Kaggle, and lyrics retrieved via the LRCLIB API. 
                         <br/><br/>
@@ -79,10 +77,10 @@ function ChartifyProject() {
                                             src="https://player.vimeo.com/video/1048797460?h=a249112e49&autoplay=1&loop=1&controls=0&autopause=0&muted=1" 
                                             className="w-full h-full rounded-lg"
                                             allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
-                                            title="Day / Night Cycle"
+                                            title="Trends"
                                         ></iframe>
                                     </div>
-                                <div className="order-1 md:order-1 col-span-1 space-y-4">
+                                <div className="order-1 md:order-1 col-span-1 space-y-4 flex flex-col justify-center">
                                     <h3 className="text-xl font-title"> Song Trends</h3>
                                     <p className="text-base text-left font-body">
                                     <strong>Interactive line graph</strong> visualizes how song attributes like tempo and energy have evolved over the past decade, with <strong>genre-specific breakdowns</strong>.
@@ -94,7 +92,7 @@ function ChartifyProject() {
                             
                             {/* Feature 2: Explore Songs */}
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 ">
-                                <div className="order-1 md:order-2 space-y-4 col-span-1">
+                                <div className="order-1 md:order-2 space-y-4 col-span-1 flex flex-col justify-center">
                                     <h3 className="text-xl font-title">Explore Songs</h3>
                                     <p className="text-base text-left font-body">
                                         Users can discover top performing <strong>songs</strong> and <strong>genres</strong>, filtered by time and region. 
@@ -107,7 +105,7 @@ function ChartifyProject() {
                                             src="https://player.vimeo.com/video/1048794708?h=c662b96571&autoplay=1&loop=1&controls=0&autopause=0&muted=1" 
                                             className="w-full h-full rounded-lg"
                                             allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
-                                            title="Day / Night Cycle"
+                                            title="Songs"
                                         ></iframe>
                                     </div>
                             </div>
@@ -116,7 +114,7 @@ function ChartifyProject() {
 
                             {/* Feature 3: Lyrics */}
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-                                <div className="order-1 md:order-1 space-y-4 col-span-1">
+                                <div className="order-1 md:order-1 space-y-4 col-span-1 flex flex-col justify-center">
                                     <h3 className="text-xl font-title">Explore Lyrics</h3>
                                     <p className="text-base text-left font-body ">
                                     By <strong>extracting n-grams</strong> (frequent phrases) from song lyrics through <strong>text-processing</strong>, this feature provides lyrical trend analysis.
@@ -129,7 +127,7 @@ function ChartifyProject() {
                                             src="https://player.vimeo.com/video/1048796942?h=31f28b996d&autoplay=1&loop=1&controls=0&autopause=0&muted=1" 
                                             className="w-full h-full rounded-lg"
                                             allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
-                                            title="Day / Night Cycle"
+                                            title="Lyrics"
                                         ></iframe>
                                     </div>
                             </div>
@@ -141,11 +139,11 @@ function ChartifyProject() {
                                             src="https://player.vimeo.com/video/1048796716?h=7b3254abfe&autoplay=1&loop=1&controls=0&autopause=0&muted=1" 
                                             className="w-full h-full rounded-lg"
                                             allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
-                                            title="Day / Night Cycle"
+                                            title="Artists"
                                         ></iframe>
                                     </div>
                                 
-                                <div className="order-1 md:order-2 space-y-4">
+                                <div className="order-1 md:order-2 space-y-4 flex flex-col justify-center">
                                     <h3 className="text-xl font-title">Explore Artists</h3>
                                     <p className="text-base text-left font-body">
                                     Users can explore top-performing artists, their charting statistics, and their most successful tracks based on time and region.

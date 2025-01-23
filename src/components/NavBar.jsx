@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom"
 import { useState } from "react"
 
-const NavBar = () => {
+function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   
   const linkClass = ({ isActive }) =>
@@ -10,9 +10,9 @@ const NavBar = () => {
       : 'text-black hover:text-rose-400 rounded-md px-3 py-2'
 
   return (
-    <nav>
+    <nav className="relative">
       <div className='mx-auto max-w-6xl px-4 sm:px-6 lg:px-8'>
-        <div className='flex h-16 items-center justify-between md:justify-start'>
+        <div className='flex h-16 items-center'>
           {/* Logo - centered on mobile, left on desktop */}
           <div className='flex-1 flex justify-center md:justify-start'>
             <NavLink className='transition-transform hover:scale-105' to='/'>
@@ -22,18 +22,19 @@ const NavBar = () => {
             </NavLink>
           </div>
 
-          {/* Desktop menu */}
-          <div className='hidden md:flex space-x-4 text-2xl font-extrabold tracking-wider lowercase font-title'>
+          {/* Desktop menu - right aligned */}
+          <div className='hidden md:flex flex-none space-x-4 text-2xl font-extrabold tracking-wider lowercase font-title'>
             <NavLink to='/about' className={linkClass}>About</NavLink>
             <NavLink to='/projects' className={linkClass}>Projects</NavLink>
             <NavLink to='/art' className={linkClass}>Art</NavLink>
           </div>
 
           {/* Mobile menu button - right aligned */}
-          <div className='md:hidden'>
+          <div className='md:hidden flex-none'>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className='text-emerald-400 hover:text-rose-400 p-2'
+              className='text-stone-950 hover:text-rose-400 p-2'
+              aria-label="Toggle menu"
             >
               <svg
                 className="h-6 w-6"
@@ -54,10 +55,29 @@ const NavBar = () => {
           </div>
         </div>
 
-        {/* Mobile menu dropdown - right aligned */}
+        {/* Mobile menu overlay */}
         {isMenuOpen && (
-          <div className='md:hidden'>
-            <div className='flex flex-col items-end space-y-2 px-2 pt-2 pb-3 text-xl font-extrabold tracking-wider lowercase font-title'>
+          <div className='md:hidden fixed inset-0 z-50 bg-white/95'>
+            {/* Close button */}
+            <button
+              onClick={() => setIsMenuOpen(false)}
+              className='absolute top-11 right-12 text-stone-950 hover:text-rose-400 p-2'
+              aria-label="Close menu"
+            >
+              <svg
+                className="h-6 w-6"
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+
+            <div className='flex flex-col items-center justify-center h-full space-y-8 text-2xl font-extrabold tracking-wider lowercase font-title'>
               <NavLink 
                 to='/about' 
                 className={linkClass}
