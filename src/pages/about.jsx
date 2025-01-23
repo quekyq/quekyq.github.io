@@ -56,7 +56,7 @@ const About = () => {
                             Hi, I&apos;m Perrie! ｡ﾟ(•ᴗ•)*:･ﾟ✧
                             <br/><br/>
                             
-                            I&apos;m a computer science graduate student pursuing my <strong>Master&apos;s in Computer and Information Technology</strong> at the University of Pennsylvania, where I&apos;ve delved deep into topics like <strong>distributed systems</strong>, <strong>computer graphics</strong>, <strong>database design</strong>, and <strong>algorithms</strong>. I love the problem-solving aspect of programming and finding elegant, creative solutions to tricky challenges.
+                            I&apos;m a <strong>computer science</strong> graduate student pursuing my master&apos;s at the University of Pennsylvania, where I&apos;ve delved deep into topics like <strong>distributed systems</strong>, <strong>computer graphics</strong>, <strong>database systems</strong>, and <strong>algorithms</strong>. I love the problem-solving aspect of programming and finding elegant, creative solutions to tricky challenges.
                             <br/> <br/>
 
                             I am particularly drawn to the <strong>art & tech</strong> space. My goal is to contribute to projects that <strong>merge technical depth with creativity</strong> to create novel and fun experiences.

@@ -37,19 +37,19 @@ function PostShadersProject() {
                             {/* <h2 className="text-2xl font-title mb-8">Individual Shaders</h2> */}
                             {/* Shader 1: Pattern */}
                             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-16">
-                                <div className="aspect-video w-full">
+                                <div className="h-[300px]">
                                     <h3 className="text-xl font-title mb-4">Sobel Filter</h3>
-                                    <img src= {postshaders.sobel} alt="Sobel" className="w-full h-full object-cover rounded-lg" />
+                                    <img src={postshaders.sobel} alt="Sobel" className="w-full h-[calc(100%-2rem)] object-cover rounded-lg" />
                                 </div>
                                
-                                <div className="aspect-video w-full">
+                                <div className="h-[300px]">
                                     <h3 className="text-xl font-title mb-4">Mosaic Effect</h3>
-                                    <img src= {postshaders.mosaic} alt="Mosaic" className="w-full h-full object-cover rounded-lg" />
+                                    <img src={postshaders.mosaic} alt="Mosaic" className="w-full h-[calc(100%-2rem)] object-cover rounded-lg" />
                                 </div>
                                  
-                                <div className="aspect-video w-full">
+                                <div className="h-[300px]">
                                     <h3 className="text-xl font-title mb-4">Matcap Shader</h3>
-                                    <div className="relative w-full h-full overflow-hidden rounded-lg">
+                                    <div className="relative w-full h-[calc(100%-2rem)] overflow-hidden rounded-lg">
                                         <iframe 
                                             src="https://player.vimeo.com/video/1049558120?h=6bec4380af&autoplay=1&loop=1&controls=0&autopause=0&muted=1" 
                                             className="absolute w-[140%] h-[140%] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
@@ -59,16 +59,14 @@ function PostShadersProject() {
                                     </div>
                                 </div>
                                  
-                                <div className="aspect-video w-full">
+                                <div className="h-[300px]">
                                     <h3 className="text-xl font-title mb-4">CRT-TV Filter</h3>
-                                    <img src= {postshaders.crt} alt="CRT-TV" className="w-full h-full object-cover rounded-lg" />
+                                    <img src={postshaders.crt} alt="CRT-TV" className="w-full h-[calc(100%-2rem)] object-cover rounded-lg" />
                                 </div>
                                  
-                                
-                                 
-                                <div className="aspect-video w-full">
+                                <div className="h-[300px]">
                                     <h3 className="text-xl font-title mb-4">Underwater Shader</h3>
-                                    <div className="relative w-full h-full overflow-hidden rounded-lg">
+                                    <div className="relative w-full h-[calc(100%-2rem)] overflow-hidden rounded-lg">
                                         <iframe 
                                             src="https://player.vimeo.com/video/1049560881?h=f136e719e6&autoplay=1&loop=1&controls=0&autopause=0&muted=1" 
                                             className="absolute w-[140%] h-[140%] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
@@ -78,20 +76,31 @@ function PostShadersProject() {
                                     </div>
                                 </div>
                                 
-                                <div className="aspect-video w-full">
+                                <div className="h-[300px]">
                                     <h3 className="text-xl font-title mb-4">Pixelization Filter</h3>
-                                    <img src= {postshaders.pixel} alt="Pixelization" className="w-full h-full object-cover rounded-lg" />
+                                    <img src={postshaders.pixel} alt="Pixelization" className="w-full h-[calc(100%-2rem)] object-cover rounded-lg" />
                                 </div>
 
-
-                                <div className="aspect-video w-full">
+                                <div className="h-[300px]">
                                     <h3 className="text-xl font-title mb-4">Blinn Phong Reflection</h3>
-                                    <img src= {postshaders.blinnphong} alt="Blinn Phong" className="w-full h-full object-cover rounded-lg" />
+                                    <img src={postshaders.blinnphong} alt="Blinn Phong" className="w-full h-[calc(100%-2rem)] object-cover rounded-lg" />
+                                </div>
+
+                                <div className="h-[300px]">
+                                    <h3 className="text-xl font-title mb-4">Vertex Deformation</h3>
+                                    <div className="relative w-full h-[calc(100%-2rem)] overflow-hidden rounded-lg">
+                                        <iframe 
+                                            src="https://player.vimeo.com/video/1049768069?h=70da2d11af&autoplay=1&loop=1&controls=0&autopause=0&muted=1" 
+                                            className="absolute w-[140%] h-[140%] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                                            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
+                                            title="Underwater Shader"
+                                        ></iframe>
+                                    </div>
                                 </div>
                                 
-                                <div className="aspect-video w-full">
+                                <div className="h-[300px]">
                                     <h3 className="text-xl font-title mb-4">Gaussian Blur Filter</h3>
-                                    <img src= {postshaders.blur} alt="Gaussian Blur" className="w-full h-full object-cover rounded-lg" />
+                                    <img src={postshaders.blur} alt="Gaussian Blur" className="w-full h-[calc(100%-2rem)] object-cover rounded-lg" />
                                 </div>
                             </div>
                         </div>
