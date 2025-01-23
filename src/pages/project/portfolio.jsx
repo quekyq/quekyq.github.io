@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { ChevronLeft } from 'lucide-react';
+import lilypad from '../../assets/art/lilypad.webp';
 
 function PortfolioProject() {
     const navigate = useNavigate();
@@ -49,8 +50,8 @@ function PortfolioProject() {
                 <div className="w-[70%] md:w-[100%] max-w-[400px] aspect-square rounded-full overflow-hidden mx-auto">
                             <div className="relative w-full h-full">
                                 <img 
-                                    src="/src/assets/art/lilypad.webp"
-                                    alt="Illustration" 
+                                    src= { lilypad }
+                                    alt="Lilypad Illustration" 
                                     className="absolute w-[125%] h-[125%] object-cover top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
                                 />
                             </div>

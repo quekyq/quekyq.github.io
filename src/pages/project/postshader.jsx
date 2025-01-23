@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { ChevronLeft } from 'lucide-react';
+import { postshaders } from '../../assets/project';
 
 function PostShadersProject() {
     const navigate = useNavigate();
@@ -38,12 +39,12 @@ function PostShadersProject() {
                             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-16">
                                 <div className="aspect-video w-full">
                                     <h3 className="text-xl font-title mb-4">Sobel Filter</h3>
-                                    <img src="/src/assets/project/postshaders/sobel.webp" alt="Sobel" className="w-full h-full object-cover rounded-lg" />
+                                    <img src= {postshaders.sobel} alt="Sobel" className="w-full h-full object-cover rounded-lg" />
                                 </div>
                                
                                 <div className="aspect-video w-full">
                                     <h3 className="text-xl font-title mb-4">Mosaic Effect</h3>
-                                    <img src="/src/assets/project/postshaders/mosaic.webp" alt="Mosaic" className="w-full h-full object-cover rounded-lg" />
+                                    <img src= {postshaders.mosaic} alt="Mosaic" className="w-full h-full object-cover rounded-lg" />
                                 </div>
                                  
                                 <div className="aspect-video w-full">
@@ -60,7 +61,7 @@ function PostShadersProject() {
                                  
                                 <div className="aspect-video w-full">
                                     <h3 className="text-xl font-title mb-4">CRT-TV Filter</h3>
-                                    <img src="/src/assets/project/postshaders/crt.webp" alt="CRT-TV" className="w-full h-full object-cover rounded-lg" />
+                                    <img src= {postshaders.crt} alt="CRT-TV" className="w-full h-full object-cover rounded-lg" />
                                 </div>
                                  
                                 
@@ -79,18 +80,18 @@ function PostShadersProject() {
                                 
                                 <div className="aspect-video w-full">
                                     <h3 className="text-xl font-title mb-4">Pixelization Filter</h3>
-                                    <img src="/src/assets/project/postshaders/pixel.webp" alt="Pixelization" className="w-full h-full object-cover rounded-lg" />
+                                    <img src= {postshaders.pixel} alt="Pixelization" className="w-full h-full object-cover rounded-lg" />
                                 </div>
 
 
                                 <div className="aspect-video w-full">
                                     <h3 className="text-xl font-title mb-4">Blinn Phong Reflection</h3>
-                                    <img src="/src/assets/project/postshaders/blinnphong.webp" alt="Blinn Phong" className="w-full h-full object-cover rounded-lg" />
+                                    <img src= {postshaders.blinnphong} alt="Blinn Phong" className="w-full h-full object-cover rounded-lg" />
                                 </div>
                                 
                                 <div className="aspect-video w-full">
                                     <h3 className="text-xl font-title mb-4">Gaussian Blur Filter</h3>
-                                    <img src="/src/assets/project/postshaders/blur.webp" alt="Gaussian Blur" className="w-full h-full object-cover rounded-lg" />
+                                    <img src= {postshaders.blur} alt="Gaussian Blur" className="w-full h-full object-cover rounded-lg" />
                                 </div>
                             </div>
                         </div>
