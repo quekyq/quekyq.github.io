@@ -5,49 +5,49 @@ const Home = () => {
     const [text, setText] = useState('');
     const [fontSize, setFontSize] = useState('16px'); 
     const imageRef = useRef(null);
+    const animationRef = useRef(null);
     const fullText = 'Hello!\nWelcome to\nmy site!\n(〜￣▽￣)〜';
     const fullText2 = 'I\'m Perrie, \nsoftware\nengineer &\nillustrator';
 
     useEffect(() => {
-        let timeoutId = null;
+        let isAnimating = true;
 
-        // Typing animated effect
         const typeText = async (textToType) => {
-            if (timeoutId) {
-                clearTimeout(timeoutId);
-            }
-
-            setText('');
+            if (!isAnimating) return;
             
-            // Type each character
+            setText('');
             for (let i = 0; i < textToType.length; i++) {
+                if (!isAnimating) return;
                 await new Promise(resolve => {
-                    timeoutId = setTimeout(() => {
-                        setText(current => current + textToType[i]);
+                    animationRef.current = setTimeout(() => {
+                        setText(prev => prev + textToType[i]);
                         resolve();
-                    }, 65);
+                    }, 60);
                 });
             }
-
-            // Wait before clearing
+            
+            if (!isAnimating) return;
             await new Promise(resolve => {
-                timeoutId = setTimeout(resolve, 1500);
+                animationRef.current = setTimeout(resolve, 800);
             });
         };
 
-        // Alternate between texts
         const animateTexts = async () => {
-            while (true) {
+            while (isAnimating) {
                 await typeText(fullText);
+                if (!isAnimating) break;
                 await typeText(fullText2);
             }
         };
 
+        // Start animation immediately
+        setText(fullText[0]);
         animateTexts();
 
         return () => {
-            if (timeoutId) {
-                clearTimeout(timeoutId);
+            isAnimating = false;
+            if (animationRef.current) {
+                clearTimeout(animationRef.current);
             }
         };
     }, []);
