@@ -2,10 +2,29 @@ import photo from '../assets/headshot.webp';
 import { FaGithub, FaLinkedin, FaFileAlt } from 'react-icons/fa';
 import { MdEmail } from "react-icons/md";
 import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import resumePDF from '../assets/YuQingQuek_resume.pdf';
 
 const About = () => {
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkIfMobile = () => {
+            setIsMobile(window.innerWidth < 640);
+        };
+        
+        // Initial check
+        checkIfMobile();
+        
+        // Add event listener
+        window.addEventListener('resize', checkIfMobile);
+        
+        // Cleanup
+        return () => window.removeEventListener('resize', checkIfMobile);
+    }, []);
+
     return (
-        <div className=" px-0 md:px-5 py-8 sm:py-16 flex flex-col gap-6">
+        <div className=" px-0 md:px-5 py-8 sm:py-14 flex flex-col gap-6">
             {/* About Section */}
             <div 
                 style={{ backgroundColor: '#c3d488' }} 
@@ -47,12 +66,23 @@ const About = () => {
                             >
                                 <MdEmail />
                             </a>
-                            <Link 
-                                to="/resume" 
-                                className="text-3xl text-stone-950 hover:text-stone-700 transition-colors"
-                            >
-                                <FaFileAlt />
-                            </Link>
+                            {isMobile ? (
+                                <a 
+                                    href={resumePDF}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-3xl text-stone-950 hover:text-stone-700 transition-colors"
+                                >
+                                    <FaFileAlt />
+                                </a>
+                            ) : (
+                                <Link 
+                                    to="/resume" 
+                                    className="text-3xl text-stone-950 hover:text-stone-700 transition-colors"
+                                >
+                                    <FaFileAlt />
+                                </Link>
+                            )}
                         </div>
                     </div>
 
