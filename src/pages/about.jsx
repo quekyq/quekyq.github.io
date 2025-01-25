@@ -1,10 +1,11 @@
 import photo from '../assets/headshot.webp';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaFileAlt } from 'react-icons/fa';
 import { MdEmail } from "react-icons/md";
+import { Link } from 'react-router-dom';
 
 const About = () => {
     return (
-        <div className=" px-0 md:px-5 py-8 flex flex-col gap-6">
+        <div className=" px-0 md:px-5 py-8 sm:py-16 flex flex-col gap-6">
             {/* About Section */}
             <div 
                 style={{ backgroundColor: '#c3d488' }} 
@@ -46,6 +47,12 @@ const About = () => {
                             >
                                 <MdEmail />
                             </a>
+                            <Link 
+                                to="/resume" 
+                                className="text-3xl text-stone-950 hover:text-stone-700 transition-colors"
+                            >
+                                <FaFileAlt />
+                            </Link>
                         </div>
                     </div>
 

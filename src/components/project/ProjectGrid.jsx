@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 function ProjectGrid({ projects }) {
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 px-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:mt-8 px-2">
             {projects.map((project) => (
                 <Link 
                     key={project.id} 

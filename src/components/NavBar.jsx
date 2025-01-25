@@ -26,6 +26,7 @@ function NavBar() {
           {/* Desktop menu - right aligned */}
           <div className='hidden md:flex flex-none space-x-4 text-2xl font-extrabold tracking-wider lowercase font-title'>
             <NavLink to='/about' className={linkClass}>About</NavLink>
+            <NavLink to='/resume' className={linkClass}>Resume</NavLink>
             <NavLink to='/projects' className={linkClass}>Projects</NavLink>
             <NavLink to='/art' className={linkClass}>Art</NavLink>
           </div>
@@ -85,6 +86,13 @@ function NavBar() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 About
+              </NavLink>
+              <NavLink 
+                to='/resume' 
+                className={linkClass}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Resume
               </NavLink>
               <NavLink 
                 to='/projects' 

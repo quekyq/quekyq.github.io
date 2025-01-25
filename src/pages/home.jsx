@@ -68,42 +68,44 @@ const Home = () => {
     }, []);
 
     return (
-        <div className="px-4 py-8">
+        <div className="px-4 py-8 sm:py-16">
             <div 
                 style={{ backgroundColor: '#f1df7e' }} 
-                className="border-stone-950 border-4 rounded-lg w-full max-w-[80vw] h-[65vh] sm:h-[70vh] max-h-[95vh] flex flex-col items-center justify-center mx-auto overflow-y-clip"
+                className="relative border-stone-950 border-4 rounded-lg w-full max-w-[80vw] h-[65vh] sm:h-[70vh] max-h-[95vh] mx-auto"
             >
-                <div className="relative w-full md:w-[80%]">
-                    <img 
-                        ref={imageRef}
-                        src={homeImage}
-                        alt="Home" 
-                        className="w-full h-full max-h-full object-contain scale-[180%] sm:scale-125 md:scale-120 lg:scale-100"
-                        style={{
-                            clipPath: 'inset(0px -999px 0px -999px)', // Prevent clipping on the sides
-                        }}
-                    />
-                    {/* <div 
-                        className="absolute top-[46%] left-[41%] sm:left-[51%] transform -translate-x-1/2 -translate-y-1/2 rotate-[-8.5deg] scale-[110%] sm:scale-125 md:scale-120 lg:scale-100"
-                    >
-                        <p 
-                            className="font-title uppercase text-emerald-500 typing-text whitespace-pre-line text-left leading-[1.3] h-[6em]"
-                            style={{ fontSize }}
+                <div className="absolute inset-0 sm:overflow-y-clip flex items-center justify-center">
+                    <div className="relative w-full md:w-[80%]">
+                        <img 
+                            ref={imageRef}
+                            src={homeImage}
+                            alt="Home" 
+                            className="w-full h-full max-h-full object-contain scale-[180%] sm:scale-125 md:scale-120 lg:scale-100"
+                            style={{
+                                clipPath: 'inset(0 -100vw 0 -100vw)',
+                                maxWidth: 'unset'
+                            }}
+                        />
+                        {/* <div 
+                            className="absolute top-[46%] left-[41%] sm:left-[51%] transform -translate-x-1/2 -translate-y-1/2 rotate-[-8.5deg] scale-[110%] sm:scale-125 md:scale-120 lg:scale-100"
                         >
-                            {text}
-                        </p>
-                    </div> */}
-                    <div 
-                        className="absolute top-[42%] sm:top-[45%] md:top-[45%] left-[63%] sm:left-[60%] md:left-[59%] lg:left-[56%] transform -translate-x-1/2 -translate-y-1/2 rotate-[-8.5deg] scale-[107%] sm:scale-[108%] md:scale-[110%] lg:scale-[104%]"
-                    >
-                        <p 
-                            className="font-title uppercase text-emerald-500 typing-text whitespace-pre-line text-left leading-[1.3] h-[6em]"
-                            style={{ fontSize, width: '15em' }} // Set a fixed width
+                            <p 
+                                className="font-title uppercase text-emerald-500 typing-text whitespace-pre-line text-left leading-[1.3] h-[6em]"
+                                style={{ fontSize }}
+                            >
+                                {text}
+                            </p>
+                        </div> */}
+                        <div 
+                            className="absolute top-[42%] sm:top-[45%] md:top-[45%] left-[63%] sm:left-[60%] md:left-[59%] lg:left-[56%] transform -translate-x-1/2 -translate-y-1/2 rotate-[-8.5deg] scale-[107%] sm:scale-[108%] md:scale-[110%] lg:scale-[104%]"
                         >
-                            {text}
-                        </p>
+                            <p 
+                                className="font-title uppercase text-emerald-500 typing-text whitespace-pre-line text-left leading-[1.3] h-[6em]"
+                                style={{ fontSize, width: '15em' }} // Set a fixed width
+                            >
+                                {text}
+                            </p>
+                        </div>
                     </div>
-
                 </div>
             </div>
 

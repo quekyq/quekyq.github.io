@@ -9,6 +9,7 @@ import {
 import { useEffect } from 'react';
 import Home from './pages/home';
 import About from './pages/about';
+import Resume from './pages/resume';
 import Art from './pages/art';
 import Projects from './pages/Projects';
 import MainLayout from './components/MainLayout';
@@ -49,6 +50,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<RootLayout/>}>    
       <Route index element={<Home/>} />
       <Route path="about" element={<About/>} />
+      <Route path="resume" element={<Resume/>} />
       <Route path="art" element={<Art/>}>
         <Route path="illustration" element={<Art/>} />
         <Route path="animation" element={<Art/>} />
