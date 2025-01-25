@@ -1,62 +1,60 @@
 import React, { useState, useEffect, useRef } from 'react';
 import homeImage from '../assets/home.webp';
 
+
 const Home = () => {
     const [text, setText] = useState('');
     const [fontSize, setFontSize] = useState('16px'); 
     const imageRef = useRef(null);
     const animationRef = useRef(null);
+    const isAnimatingRef = useRef(true); // Persist animation state
     const fullText = 'Hello!\nWelcome to\nmy site!\n(〜￣▽￣)〜';
     const fullText2 = 'I\'m Perrie, \nsoftware\nengineer &\nillustrator';
 
     useEffect(() => {
-        let isAnimating = true;
-
         const typeText = async (textToType) => {
-            if (!isAnimating) return;
-            
-            setText('');
+            setText(''); // Clear the text before typing
             for (let i = 0; i < textToType.length; i++) {
-                if (!isAnimating) return;
-                await new Promise(resolve => {
+                if (!isAnimatingRef.current) return; // Check if animation should stop
+                await new Promise((resolve) => {
                     animationRef.current = setTimeout(() => {
-                        setText(prev => prev + textToType[i]);
+                        setText((prev) => prev + textToType[i]);
                         resolve();
                     }, 60);
                 });
             }
-            
-            if (!isAnimating) return;
-            await new Promise(resolve => {
-                animationRef.current = setTimeout(resolve, 800);
+            await new Promise((resolve) => {
+                animationRef.current = setTimeout(resolve, 800); // Pause before switching text
             });
         };
 
         const animateTexts = async () => {
-            while (isAnimating) {
+            while (isAnimatingRef.current) {
                 await typeText(fullText);
-                if (!isAnimating) break;
+                if (!isAnimatingRef.current) break;
                 await typeText(fullText2);
             }
         };
 
-        // Start animation immediately
-        setText(fullText[0]);
+        isAnimatingRef.current = true; // Ensure animation starts fresh
         animateTexts();
 
         return () => {
-            isAnimating = false;
-            if (animationRef.current) {
-                clearTimeout(animationRef.current);
-            }
+            isAnimatingRef.current = false; // Stop animation on cleanup
+            if (animationRef.current) clearTimeout(animationRef.current);
         };
-    }, []);
+    }, [fullText, fullText2]);
 
     useEffect(() => {
         const updateFontSizeAndPosition = () => {
             if (imageRef.current) {
                 const imageWidth = imageRef.current.offsetWidth;
-                const newFontSize = imageWidth * 0.027;
+                // Adjust font size based on image scale
+                const scale = window.innerWidth < 640 ? 1.8 : // mobile
+                            window.innerWidth < 768 ? 1.25 : // sm
+                            window.innerWidth < 1024 ? 1.2 : // md
+                            1; // lg
+                const newFontSize = imageWidth * 0.027 * scale;
                 setFontSize(`${newFontSize}px`);
             }
         };
@@ -73,29 +71,39 @@ const Home = () => {
         <div className="px-4 py-8">
             <div 
                 style={{ backgroundColor: '#f1df7e' }} 
-                className="border-stone-950 border-4 rounded-lg min-h-[25vh] w-full max-h-[85vh] flex flex-col items-center justify-center p-8"
+                className="border-stone-950 border-4 rounded-lg w-full max-w-[80vw] h-[75vh] sm:h-[70vh] max-h-[95vh] flex flex-col items-center justify-center mx-auto overflow-y-clip"
             >
-                <div className="relative w-full md:max-w-[80%]">
+                <div className="relative w-full md:w-[80%]">
                     <img 
                         ref={imageRef}
-                        src={homeImage} 
+                        src={homeImage}
                         alt="Home" 
+                        className="w-full h-full max-h-full object-contain scale-[180%] sm:scale-125 md:scale-120 lg:scale-100"
                     />
-                    <div 
-                        className="absolute top-[46%] left-[50.5%] transform -translate-x-1/2 -translate-y-1/2 rotate-[-8.5deg] w-[30%]"
-                        style={{ fontSize }}
+                    {/* <div 
+                        className="absolute top-[46%] left-[41%] sm:left-[51%] transform -translate-x-1/2 -translate-y-1/2 rotate-[-8.5deg] scale-[110%] sm:scale-125 md:scale-120 lg:scale-100"
                     >
-                        <div className="h-[6em] flex flex-col justify-start">
-                            <p 
-                                className="font-title uppercase text-emerald-500 typing-text whitespace-pre-line text-left leading-[1.3]"
-                                style={{ fontSize }}
-                            >
-                                {text}
-                            </p>
-                        </div>
-                    </div> 
+                        <p 
+                            className="font-title uppercase text-emerald-500 typing-text whitespace-pre-line text-left leading-[1.3] h-[6em]"
+                            style={{ fontSize }}
+                        >
+                            {text}
+                        </p>
+                    </div> */}
+                    <div 
+                        className="absolute top-[42%] sm:top-[45%] md:top-[45%] left-[63%] sm:left-[60%] md:left-[59%] lg:left-[56%] transform -translate-x-1/2 -translate-y-1/2 rotate-[-8.5deg] scale-[107%] sm:scale-[108%] md:scale-[110%] lg:scale-[104%]"
+                    >
+                        <p 
+                            className="font-title uppercase text-emerald-500 typing-text whitespace-pre-line text-left leading-[1.3] h-[6em]"
+                            style={{ fontSize, width: '15em' }} // Set a fixed width
+                        >
+                            {text}
+                        </p>
+                    </div>
+
                 </div>
             </div>
+
         </div>
     );
 };

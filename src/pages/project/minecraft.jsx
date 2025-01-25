@@ -60,7 +60,7 @@ function MinecraftProject() {
                                         <br/><br/>4 biomes are created: Badlands, Plains, Mountains, and Deserts. 
                                     </p>
                                 </div>
-                                <div className="col-span-2 grid grid-cols-2 gap-2">
+                                <div className="md:col-span-2 grid grid-cols-2 gap-2">
                                     <img src={minecraft.badlands} alt="Badlands" className="w-full h-full object-cover rounded-lg" />
                                     <img src={minecraft.mountains} alt="Mountains" className="w-full h-full object-cover rounded-lg" />
                                     <img src={minecraft.plains} alt="Plains" className="w-full h-full object-cover rounded-lg" />
@@ -92,14 +92,14 @@ function MinecraftProject() {
 
                             {/* Feature 3: Procedural Assets */}
                             <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-16">
-                                <div className="space-y-4 col-span-2 flex flex-col justify-center">
+                                <div className="space-y-4 md:col-span-2 flex flex-col justify-center">
                                     <h3 className="text-xl font-title">Procedural Clouds and Assets</h3>
                                     <p className="text-base md:text-left font-body ">
                                         Developed a system for procedurally generating assets including clouds, 
                                         trees, flowers, and stars. Each asset type has specific generation rules to ensure appropriate placement and appearance.
                                     </p>
                                 </div>
-                                <div className="grid grid-cols-2 col-span-3 gap-2">
+                                <div className="grid grid-cols-2 md:col-span-3 gap-2">
                                     <img src={minecraft.assets} alt="Assets" className="w-full  object-cover rounded-lg " />
                                     <img src={minecraft.cloud} alt="Clouds" className="w-full object-cover rounded-lg " />
                                 </div>
@@ -107,13 +107,13 @@ function MinecraftProject() {
 
                             {/* Feature 4: Post-Processing */}
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-                                <div className="col-span-2 order-2 md:order-1 grid grid-cols-2 gap-2">
+                                <div className="md:col-span-2 order-2 md:order-1 grid grid-cols-2 gap-2">
                                     <img src={minecraft.fog} alt="Fog 1" className="w-full h-full object-cover rounded-lg" />
                                     <img src={minecraft.fog2} alt="Fog 2" className="w-full h-full object-cover rounded-lg" />
                                     <img src={minecraft.water} alt="Underwater" className="w-full h-full object-cover rounded-lg " />
                                     <img src={minecraft.lava} alt="Under-Lava" className="w-full h-full object-cover rounded-lg " />
                                 </div>
-                                <div className="order-1 md:order-2 col-span-1 space-y-4 flex flex-col justify-center">
+                                <div className="order-1 md:order-2 md:col-span-1 space-y-4 flex flex-col justify-center">
                                     <h3 className="text-xl font-title"> Post-Process Effects</h3>
                                     <p className="text-base md:text-left font-body">
                                         Implemented various post-processing effects using frame buffers and custom shaders.

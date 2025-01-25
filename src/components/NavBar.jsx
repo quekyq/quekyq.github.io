@@ -11,10 +11,11 @@ function NavBar() {
 
   return (
     <nav className="relative">
-      <div className='mx-auto max-w-6xl px-4 sm:px-6 lg:px-8'>
+      <div className='mx-auto w-[80vw] md:max-w-6xl'>
+        
         <div className='flex h-16 items-center'>
           {/* Logo - centered on mobile, left on desktop */}
-          <div className='flex-1 flex justify-center md:justify-start'>
+          <div className='flex-1 flex justify-center md:justify-start translate-x-5 md:translate-x-0'>
             <NavLink className='transition-transform hover:scale-105' to='/'>
               <span className='text-black text-4xl font-extrabold tracking-wider font-title'>
                 perrie
@@ -33,15 +34,15 @@ function NavBar() {
           <div className='md:hidden flex-none'>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className='text-stone-950 hover:text-rose-400 p-2'
+              className='text-stone-950 hover:text-rose-400 py-2 mt-1'
               aria-label="Toggle menu"
             >
               <svg
-                className="h-6 w-6"
+                className="h-8 w-8"
                 fill="none"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                strokeWidth="2"
+                strokeWidth="3"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
               >
@@ -61,15 +62,15 @@ function NavBar() {
             {/* Close button */}
             <button
               onClick={() => setIsMenuOpen(false)}
-              className='absolute top-11 right-12 text-stone-950 hover:text-rose-400 p-2'
+              className='absolute top-11 right-10 text-stone-950 hover:text-rose-400 py-2'
               aria-label="Close menu"
             >
               <svg
-                className="h-6 w-6"
+                className="h-8 w-8"
                 fill="none"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                strokeWidth="2"
+                strokeWidth="3"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
               >

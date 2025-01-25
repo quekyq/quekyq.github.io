@@ -74,7 +74,7 @@ function ChartifyProject() {
                             <h2 className="text-2xl font-title mb-8">Key Features</h2>
                             {/* Feature 1: Trends */}
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-                                <div className="order-2 md:order-2 col-span-2 aspect-video w-full">
+                                <div className="order-2 md:order-2 md:col-span-2 aspect-video w-full">
                                         <iframe 
                                             src="https://player.vimeo.com/video/1048797460?h=a249112e49&autoplay=1&loop=1&controls=0&autopause=0&muted=1" 
                                             className="w-full h-full rounded-lg"
@@ -83,9 +83,9 @@ function ChartifyProject() {
                                         ></iframe>
                                     </div>
                                 <div className="order-1 md:order-1 col-span-1 space-y-4 flex flex-col justify-center">
-                                    <h3 className="text-xl font-title"> Song Trends</h3>
-                                    <p className="text-base text-left font-body">
-                                    <strong>Interactive line graph</strong> visualizes how song attributes like tempo and energy have evolved over the past decade, with <strong>genre-specific breakdowns</strong>.
+                                    <h3 className="text-xl font-title text-center md:text-left">Song Trends</h3>
+                                    <p className="text-base text-center md:text-left font-body">
+                                        <strong>Interactive line graph</strong> visualizes how song attributes like tempo and energy have evolved over the past decade, with <strong>genre-specific breakdowns</strong>.
                                         <br/> <br/> 
                                         Users can also explore attribute correlations through an <strong>interactive scatter graph.</strong>
                                     </p>
@@ -93,16 +93,16 @@ function ChartifyProject() {
                             </div>
                             
                             {/* Feature 2: Explore Songs */}
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 ">
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
                                 <div className="order-1 md:order-2 space-y-4 col-span-1 flex flex-col justify-center">
-                                    <h3 className="text-xl font-title">Explore Songs</h3>
-                                    <p className="text-base text-left font-body">
+                                    <h3 className="text-xl font-title text-center md:text-left">Explore Songs</h3>
+                                    <p className="text-base text-center md:text-left font-body">
                                         Users can discover top performing <strong>songs</strong> and <strong>genres</strong>, filtered by time and region. 
                                         <br/><br/>
-                                        A <strong>search and autocomplete functionality</strong> allows users to dive into a specific song's week-by-week charting history, global performance metrics, and detailed song attributes.
+                                        A <strong>search and autocomplete functionality</strong> allows users to dive into a specific song&apos;s week-by-week charting history, global performance metrics, and detailed song attributes.
                                     </p>
                                 </div>
-                                <div className="order-2 md:order-1 col-span-2 aspect-video w-full">
+                                <div className="order-2 md:order-1 md:col-span-2 aspect-video w-full">
                                         <iframe 
                                             src="https://player.vimeo.com/video/1048794708?h=c662b96571&autoplay=1&loop=1&controls=0&autopause=0&muted=1" 
                                             className="w-full h-full rounded-lg"
@@ -117,14 +117,14 @@ function ChartifyProject() {
                             {/* Feature 3: Lyrics */}
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
                                 <div className="order-1 md:order-1 space-y-4 col-span-1 flex flex-col justify-center">
-                                    <h3 className="text-xl font-title">Explore Lyrics</h3>
-                                    <p className="text-base text-left font-body ">
-                                    By <strong>extracting n-grams</strong> (frequent phrases) from song lyrics through <strong>text-processing</strong>, this feature provides lyrical trend analysis.
-                                    <br/><br/>
-                                    Users can filter results by explicit content, time, and region to uncover insights into lyrical themes over time.
+                                    <h3 className="text-xl font-title text-center md:text-left">Explore Lyrics</h3>
+                                    <p className="text-base text-center md:text-left font-body">
+                                        By <strong>extracting n-grams</strong> (frequent phrases) from song lyrics through <strong>text-processing</strong>, this feature provides lyrical trend analysis.
+                                        <br/><br/>
+                                        Users can filter results by explicit content, time, and region to uncover insights into lyrical themes over time.
                                     </p>
                                 </div>
-                                <div className="order-2 md:order-2 col-span-2 aspect-video w-full">
+                                <div className="order-2 md:order-2 md:col-span-2 aspect-video w-full">
                                         <iframe 
                                             src="https://player.vimeo.com/video/1048796942?h=31f28b996d&autoplay=1&loop=1&controls=0&autopause=0&muted=1" 
                                             className="w-full h-full rounded-lg"
@@ -136,7 +136,7 @@ function ChartifyProject() {
 
                             {/* Feature 4: Explore Artist */}
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-                                <div className="order-2 md:order-1 col-span-2 aspect-video w-full">
+                                <div className="order-2 md:order-1 md:col-span-2 aspect-video w-full">
                                         <iframe 
                                             src="https://player.vimeo.com/video/1048796716?h=7b3254abfe&autoplay=1&loop=1&controls=0&autopause=0&muted=1" 
                                             className="w-full h-full rounded-lg"
@@ -146,9 +146,9 @@ function ChartifyProject() {
                                     </div>
                                 
                                 <div className="order-1 md:order-2 space-y-4 flex flex-col justify-center">
-                                    <h3 className="text-xl font-title">Explore Artists</h3>
-                                    <p className="text-base text-left font-body">
-                                    Users can explore top-performing artists, their charting statistics, and their most successful tracks based on time and region.
+                                    <h3 className="text-xl font-title text-center md:text-left">Explore Artists</h3>
+                                    <p className="text-base text-center md:text-left font-body">
+                                        Users can explore top-performing artists, their charting statistics, and their most successful tracks based on time and region.
                                         <br/><br/>
                                         For individual artists, users can search and explore their charting history, performance data, and lyrical patterns.
                                     </p>

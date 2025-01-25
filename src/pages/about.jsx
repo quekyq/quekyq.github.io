@@ -4,7 +4,7 @@ import { MdEmail } from "react-icons/md";
 
 const About = () => {
     return (
-        <div className="md:px-4 py-8 flex flex-col gap-6">
+        <div className=" px-0 md:px-5 py-8 flex flex-col gap-6">
             {/* About Section */}
             <div 
                 style={{ backgroundColor: '#c3d488' }} 
@@ -134,7 +134,7 @@ const About = () => {
                         
                     </div>
                     <div className='col-span-2'>
-                        <ul style={{ fontSize: 'clamp(13px, 1.3vw, 15px)'  }} className="list-disc font-body px-4 text-left space-y-1 text-black">
+                        <ul style={{ fontSize: 'clamp(13px, 1.3vw, 15px)'  }} className="list-disc font-body pl-4 text-left space-y-1 text-black">
                                 <li> TA for <strong>CIS 5950 Computer Systems Programming</strong>, and <strong>CIS 2400 Introduction to Computer Systems</strong></li>
                                 <li>Offered academic support to students, hosted weekly office hours, and provided code review in C and C++</li>
                                 <li>Developed tests for homework autograder and maintained assignment infrastructure</li>
@@ -157,7 +157,7 @@ const About = () => {
                         
                     </div>
                     <div className='col-span-2'>
-                        <ul style={{ fontSize: 'clamp(13px, 1.3vw, 15px)'  }} className="list-disc font-body px-4 text-left space-y-1 text-sm text-black">
+                        <ul style={{ fontSize: 'clamp(13px, 1.3vw, 15px)'  }} className="list-disc font-body pl-4 text-left space-y-1 text-sm text-black">
                                 <li> Converted a Java-based codebase to C# to facilitate integration with Rhino3D (3D modeling software for architects)</li>
                                 <li>Developed custom scripting components to enable dynamic interaction between the simulation software and architectural models in Rhino3D, streamlining workflow efficiency</li>
                                 <li>Optimized code by identifying redundancies and reworking inefficient data structures</li>

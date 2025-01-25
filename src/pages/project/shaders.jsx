@@ -44,7 +44,6 @@ function ShadersProject() {
 
                         {/* Shaders Section */}
                         <div className="mt-12 pt-12 border-t-2 border-t-stone-400">
-                            {/* <h2 className="text-2xl font-title mb-8">Individual Shaders</h2> */}
                             {/* Shader 1: Pattern */}
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
                                 <div className="order-2 md:order-2">

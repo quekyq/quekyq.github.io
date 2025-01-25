@@ -79,13 +79,14 @@ function StudyWithMeProject() {
 
                 {/* Slide Deck Section */}
                 <h2 className="mt-12 pt-12 border-t-2 border-t-stone-400 text-xl font-title text-black mb-4">Click through the slides to learn more!</h2>
-                <div className="aspect-video flex justify-center w-full mb-8">
+                <div className="aspect-video flex justify-center w-full h-full mb-12">
                     <iframe 
-                        width="680" 
-                        height="420" 
+
+                        className= "w-full md:max-w-[65vw] xl:max-w-[45vw] h-full mt-2"
                         src="https://docs.google.com/presentation/d/e/2PACX-1vR3uEZ6NO2R85rvUu6dADkcy8t7dsWUH5_28dIHobknnOeKDaLL-rz3KFG2eXRByAPlHGaJrhKal7Qe/embed?start=false&loop=true&delayms=3000" 
                         title="Study With Me Slide Deck" 
                         allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"
+                        style={{ aspectRatio: "16/9", objectFit: "cover" }}
                     />
                 </div>
             </div>
