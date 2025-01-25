@@ -3,8 +3,10 @@ import {
   Route, 
   createBrowserRouter, 
   createRoutesFromElements, 
-  RouterProvider
+  RouterProvider,
+  useLocation
 } from 'react-router-dom';
+import { useEffect } from 'react';
 import Home from './pages/home';
 import About from './pages/about';
 import Art from './pages/art';
@@ -21,9 +23,30 @@ import StudyWithMeProject from './pages/project/studywithme';
 import PostShadersProject from './pages/project/postshader';
 import PortfolioProject from './pages/project/portfolio';
 
+// Scroll restoration component
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
+// Wrap MainLayout with ScrollToTop
+function RootLayout() {
+  return (
+    <>
+      <ScrollToTop />
+      <MainLayout />
+    </>
+  );
+}
+
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<MainLayout/>}>    
+    <Route path="/" element={<RootLayout/>}>    
       <Route index element={<Home/>} />
       <Route path="about" element={<About/>} />
       <Route path="art" element={<Art/>}>

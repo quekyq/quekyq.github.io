@@ -73,13 +73,23 @@ function AnimationDetail() {
                 </div>
             
                 <div className="relative mt-6 flex justify-center">
-                    <div className="w-full md:w-[85%] aspect-video">
-                        <iframe
-                            src={animation.embed}
-                            className="absolute inset-0 w-full h-full rounded-lg"
-                            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-                            title={animation.title}
-                        />
+                    <div className="w-full md:w-[85%]">
+                        <div className="relative w-full">
+                            <div 
+                                className="w-full overflow-hidden"
+                                style={{ 
+                                    aspectRatio: animation.aspectRatio,
+                                    maxHeight: 'min(calc(100vw * 0.85), 65vh)'
+                                }}
+                            >
+                                <iframe
+                                    src={animation.embed}
+                                    className="w-full h-full rounded-lg"
+                                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                                    title={animation.title}
+                                />
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -91,7 +101,7 @@ function AnimationDetail() {
                             {animation.awards && (
                                 <div>
                                     <h3 className="text-base uppercase font-body pb-4">Awards</h3>
-                                    <ul className="list-none text-left font-body space-y-1 text-xs">
+                                    <ul className="list-none text-center md:text-left font-body space-y-1 text-xs">
                                         {animation.awards.map((award, index) => (
                                             <li key={index}>{award}</li>
                                         ))}
@@ -102,7 +112,7 @@ function AnimationDetail() {
                             {animation.selections && (
                                 <div>
                                     <h3 className="text-base uppercase font-body pb-4">Official Selections</h3>
-                                    <ul className="list-none font-body  space-y-1 text-left text-xs">
+                                    <ul className="list-none font-body  space-y-1 text-center md:text-left text-xs">
                                         {animation.selections.map((selection, index) => (
                                             <li key={index}>{selection}</li>
                                         ))}

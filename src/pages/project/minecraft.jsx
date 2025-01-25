@@ -61,10 +61,10 @@ function MinecraftProject() {
                                     </p>
                                 </div>
                                 <div className="md:col-span-2 grid grid-cols-2 gap-2">
-                                    <img src={minecraft.badlands} alt="Badlands" className="w-full h-full object-cover rounded-lg" />
-                                    <img src={minecraft.mountains} alt="Mountains" className="w-full h-full object-cover rounded-lg" />
-                                    <img src={minecraft.plains} alt="Plains" className="w-full h-full object-cover rounded-lg" />
-                                    <img src={minecraft.desert} alt="Deserts" className="w-full h-full object-cover rounded-lg" />
+                                    <img src={minecraft.badlands} alt="Badlands" className="w-full h-[15vh] sm:h-full object-cover rounded-lg" />
+                                    <img src={minecraft.mountains} alt="Mountains" className="w-full h-[15vh] sm:h-full object-cover rounded-lg" />
+                                    <img src={minecraft.plains} alt="Plains" className="w-full h-[15vh] sm:h-full object-cover rounded-lg" />
+                                    <img src={minecraft.desert} alt="Deserts" className="w-full h-[15vh] sm:h-full object-cover rounded-lg" />
                                 </div>
                             </div>
 
@@ -108,10 +108,10 @@ function MinecraftProject() {
                             {/* Feature 4: Post-Processing */}
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
                                 <div className="md:col-span-2 order-2 md:order-1 grid grid-cols-2 gap-2">
-                                    <img src={minecraft.fog} alt="Fog 1" className="w-full h-full object-cover rounded-lg" />
-                                    <img src={minecraft.fog2} alt="Fog 2" className="w-full h-full object-cover rounded-lg" />
-                                    <img src={minecraft.water} alt="Underwater" className="w-full h-full object-cover rounded-lg " />
-                                    <img src={minecraft.lava} alt="Under-Lava" className="w-full h-full object-cover rounded-lg " />
+                                    <img src={minecraft.fog} alt="Fog 1" className="w-full h-[15vh] sm:h-full object-cover rounded-lg" />
+                                    <img src={minecraft.fog2} alt="Fog 2" className="w-full h-[15vh] sm:h-full object-cover rounded-lg" />
+                                    <img src={minecraft.water} alt="Underwater" className="w-full h-[15vh] sm:h-full object-cover rounded-lg " />
+                                    <img src={minecraft.lava} alt="Under-Lava" className="w-full h-[15vh] sm:h-full object-cover rounded-lg " />
                                 </div>
                                 <div className="order-1 md:order-2 md:col-span-1 space-y-4 flex flex-col justify-center">
                                     <h3 className="text-xl font-title"> Post-Process Effects</h3>

@@ -71,7 +71,7 @@ const Home = () => {
         <div className="px-4 py-8">
             <div 
                 style={{ backgroundColor: '#f1df7e' }} 
-                className="border-stone-950 border-4 rounded-lg w-full max-w-[80vw] h-[75vh] sm:h-[70vh] max-h-[95vh] flex flex-col items-center justify-center mx-auto overflow-y-clip"
+                className="border-stone-950 border-4 rounded-lg w-full max-w-[80vw] h-[65vh] sm:h-[70vh] max-h-[95vh] flex flex-col items-center justify-center mx-auto overflow-y-clip"
             >
                 <div className="relative w-full md:w-[80%]">
                     <img 
@@ -79,6 +79,9 @@ const Home = () => {
                         src={homeImage}
                         alt="Home" 
                         className="w-full h-full max-h-full object-contain scale-[180%] sm:scale-125 md:scale-120 lg:scale-100"
+                        style={{
+                            clipPath: 'inset(0px -999px 0px -999px)', // Prevent clipping on the sides
+                        }}
                     />
                     {/* <div 
                         className="absolute top-[46%] left-[41%] sm:left-[51%] transform -translate-x-1/2 -translate-y-1/2 rotate-[-8.5deg] scale-[110%] sm:scale-125 md:scale-120 lg:scale-100"
